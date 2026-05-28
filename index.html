@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body id="top">
   <div class="grain" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <a class="logo" href="#top">AM</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -78,32 +78,26 @@
         <h2>Projects</h2>
       </div>
       <p class="section-intro">
-        Projects will show up here as I build them.
+        Data work, analysis, and things I've shipped.
       </p>
 
-      <div class="projects-empty">
-        <p class="projects-empty-text">Nothing here yet — check back soon.</p>
-        <a class="btn btn-ghost" href="https://github.com/isnthisarnav" target="_blank" rel="noopener noreferrer">Follow on GitHub</a>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Data analysis</span>
+            <span class="project-year">2026</span>
+          </div>
+          <h3>IPL match analysis</h3>
+          <p>
+            Dug into 1100+ IPL matches (2008–2025) to find out what actually decides a game.
+            Analyzed toss impact, home ground advantage, team performance across seasons, and whether
+            scores have gone up over the years. Built with Python — pandas, matplotlib, and seaborn.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/isnthisarnav/IPLproj" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </article>
       </div>
-
-      <!--
-        Add projects below when ready. Copy this block for each one:
-
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-meta">
-              <span class="project-tag">Category</span>
-              <span class="project-year">2026</span>
-            </div>
-            <h3>Project name</h3>
-            <p>Short description of what you built.</p>
-            <div class="project-links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
-          </article>
-        </div>
-      -->
     </section>
 
     <section id="experience" class="section experience">
@@ -162,7 +156,9 @@
         </a>
       </div>
     </section>
-  </main>
+  </main>i am holding a 5 day PIEDS bootcamp for technical analysis , the sessions are going to be an hr a day,  we need to teach from basics like candlesticks pattern, moving averages to something more important and difficult , give me a detailed plan for all days splitting the work and how to teach in detailed
+
+  11:01 
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Arnav Mhatre</p>
