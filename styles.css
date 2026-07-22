@@ -205,20 +205,22 @@ a:hover {
   50% { transform: translate(-4%, 3%) scale(1.08); }
 }
 
-.hero-glow {
-  position: absolute;
+.page-glow {
+  position: fixed;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.4s var(--ease);
+  transition: opacity 0.6s var(--ease);
+  mix-blend-mode: screen;
   background: radial-gradient(
-    360px circle at var(--mx, 50%) var(--my, 50%),
+    500px circle at var(--mx, 50%) var(--my, 50%),
     rgba(110, 231, 183, 0.1),
     transparent 70%
   );
 }
 
-.hero:hover .hero-glow {
+.page-glow.active {
   opacity: 1;
 }
 

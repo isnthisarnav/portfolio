@@ -98,16 +98,26 @@ if (roleEl) {
   }, 2600);
 }
 
-/* Hero cursor glow */
-const hero = document.querySelector(".hero");
+/* Page-wide cursor glow */
+const pageGlow = document.querySelector(".page-glow");
 
-if (hero) {
-  hero.addEventListener("pointermove", (e) => {
-    const rect = hero.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    hero.style.setProperty("--mx", x + "%");
-    hero.style.setProperty("--my", y + "%");
+if (pageGlow) {
+  const root = document.documentElement;
+
+  window.addEventListener(
+    "pointermove",
+    (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      root.style.setProperty("--mx", x + "%");
+      root.style.setProperty("--my", y + "%");
+      pageGlow.classList.add("active");
+    },
+    { passive: true }
+  );
+
+  document.addEventListener("mouseleave", () => {
+    pageGlow.classList.remove("active");
   });
 }
 
